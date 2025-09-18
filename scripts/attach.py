@@ -15,10 +15,10 @@ if __name__ == '__main__':
     # Link them
     rospy.loginfo("Attaching cube1 and cube2")
     req = AttachRequest()
-    req.model_name_1 = "cube1"
-    req.link_name_1 = "link"
-    req.model_name_2 = "cube2"
-    req.link_name_2 = "link"
+    req.model_name_1 = "rope_r" #cube1"
+    req.link_name_1 = "rope_link_6" #"link"
+    req.model_name_2 = "NextageOpen"
+    req.link_name_2 = "RARM_JOINT5_Link" #"link"
 
     attach_srv.call(req)
     # From the shell:
@@ -29,20 +29,20 @@ model_name_2: 'cube2'
 link_name_2: 'link'"
     """
 
-    rospy.loginfo("Attaching cube2 and cube3")
-    req = AttachRequest()
-    req.model_name_1 = "cube2"
-    req.link_name_1 = "link"
-    req.model_name_2 = "cube3"
-    req.link_name_2 = "link"
+    # rospy.loginfo("Attaching cube2 and cube3")
+    # req = AttachRequest()
+    # req.model_name_1 = "cube2"
+    # req.link_name_1 = "link"
+    # req.model_name_2 = "cube3"
+    # req.link_name_2 = "link"
 
-    attach_srv.call(req)
+    # attach_srv.call(req)
 
-    rospy.loginfo("Attaching cube3 and cube1")
-    req = AttachRequest()
-    req.model_name_1 = "cube3"
-    req.link_name_1 = "link"
-    req.model_name_2 = "cube1"
-    req.link_name_2 = "link"
+    # rospy.loginfo("Attaching cube3 and cube1")
+    # req = AttachRequest()
+    # req.model_name_1 = "cube3"
+    # req.link_name_1 = "link"
+    # req.model_name_2 = "cube1"
+    # req.link_name_2 = "link"
 
-    attach_srv.call(req)
+    # attach_srv.call(req)
